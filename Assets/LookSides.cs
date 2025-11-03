@@ -22,35 +22,7 @@ public class LookSidesController : MonoBehaviour
     {
         StopCoroutine(coroutine);
     }
-
-    //Activate with collision Enter
-    /*
-    IEnumerator CrossCheck()    
-    {
-        int sideChecked = 0;
-        foreach (SideTrigger trigger in sideTriggers)
-        {
-            if (trigger.sideCheck)
-            {
-                sideChecked++;
-            }
-        }
-        if (sideChecked < sideTriggers.Length)
-        {
-            Debug.Log("Side/s Unchecked found");
-            yield return new WaitForSeconds(loseDelayTime);
-            Debug.Log("Lose");
-        }
-        else
-        {
-            //TODO Enable safe cross
-            yield return null; 
-        }
-    }
-    */
     
-    
-    //V2
     IEnumerator CrossCheck()
     {
         if (!sideTriggers[0].sideCheck && !sideTriggers[1].sideCheck)
