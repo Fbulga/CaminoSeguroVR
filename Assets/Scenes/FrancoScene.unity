@@ -503,6 +503,9 @@ Material:
     - _EmissionColor: {r: 0, g: 0.15, b: 0, a: 0.15}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1001 &288094599
 PrefabInstance:
@@ -519,7 +522,11 @@ PrefabInstance:
     - target: {fileID: 477648, guid: fcd06c9319e99cc4bbee7ce7730d9422, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: 188.2
+>>>>>>> Stashed changes
 =======
       value: 188.2
 >>>>>>> Stashed changes
@@ -531,7 +538,11 @@ PrefabInstance:
     - target: {fileID: 477648, guid: fcd06c9319e99cc4bbee7ce7730d9422, type: 3}
       propertyPath: m_LocalPosition.z
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: -46.5
+>>>>>>> Stashed changes
 =======
       value: -46.5
 >>>>>>> Stashed changes
@@ -615,7 +626,10 @@ Animation:
   m_AnimatePhysics: 0
   m_CullingType: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!21 &309413618
 Material:
   serializedVersion: 8
@@ -1027,6 +1041,9 @@ Material:
     - _EmissionColor: {r: 0.15, g: 0, b: 0, a: 0.15}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!21 &866470111
 Material:
@@ -1866,7 +1883,11 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.x
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: 243.6
+>>>>>>> Stashed changes
 =======
       value: 243.6
 >>>>>>> Stashed changes
@@ -1878,7 +1899,11 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: -59
+>>>>>>> Stashed changes
 =======
       value: -59
 >>>>>>> Stashed changes
@@ -3227,4 +3252,7 @@ SceneRoots:
   - {fileID: 1646960536}
   - {fileID: 5706918634825061312}
   - {fileID: 1886054673872592508}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
