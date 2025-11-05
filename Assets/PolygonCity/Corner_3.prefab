@@ -138,10 +138,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corner_3
       objectReference: {fileID: 0}
+    - target: {fileID: 9194167613468941949, guid: e73e7a39cda595c4e8e6a2da9842b5af, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a8e32d2cd442e564aa46c99f0ae7c0c8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8024091458255153064, guid: e73e7a39cda595c4e8e6a2da9842b5af, type: 3}
     - {fileID: 6080862800730137001, guid: e73e7a39cda595c4e8e6a2da9842b5af, type: 3}
+    - {fileID: 4622702211905427525, guid: e73e7a39cda595c4e8e6a2da9842b5af, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 375774060742252341, guid: e73e7a39cda595c4e8e6a2da9842b5af, type: 3}
       insertIndex: -1
