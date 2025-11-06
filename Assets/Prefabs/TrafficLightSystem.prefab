@@ -591,6 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8676823911299685108}
   - component: {fileID: 1744847718341079683}
+  - component: {fileID: 939740602877201794}
   m_Layer: 0
   m_Name: TrafficLightSystem
   m_TagString: Untagged
@@ -628,20 +629,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axisA:
-    autoRed: {fileID: 6435123389143336329}
-    autoGreen: {fileID: 5957972702139473593}
+    autoRed: {fileID: 6042090801233192918}
+    autoGreen: {fileID: 3710012502531322835}
     pedRed: {fileID: 5119193327552172279}
     pedGreen: {fileID: 6210021158414015644}
   axisB:
-    autoRed: {fileID: 6042090801233192918}
-    autoGreen: {fileID: 3710012502531322835}
+    autoRed: {fileID: 6435123389143336329}
+    autoGreen: {fileID: 5957972702139473593}
     pedRed: {fileID: 548740868276616899}
     pedGreen: {fileID: 5747725364122013639}
-  greenColor: {r: 0, g: 1, b: 0, a: 1}
-  redColor: {r: 1, g: 0, b: 0, a: 1}
+  greenColor: {r: 0, g: 0.20754719, b: 0, a: 1}
+  redColor: {r: 0.18867922, g: 0, b: 0, a: 1}
   onEmissionIntensity: 2.5
   offEmissionIntensity: 0.15
-  isAActive: 0
+  isAActive: 1
+--- !u!114 &939740602877201794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4751095304304047842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33cc1d97dd804691a7b5d5cad4d36347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7638957311551402259
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,8 +681,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7638957311551402259}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 9.19, y: 0, z: 0}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -3.12, y: 0, z: 9.51}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -678,7 +691,7 @@ Transform:
   - {fileID: 7834127046039171813}
   - {fileID: 8073306425438202603}
   m_Father: {fileID: 8676823911299685108}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: -90}
 --- !u!33 &5574258342838219452
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -839,7 +852,7 @@ Transform:
   m_GameObject: {fileID: 8950337451750272181}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.49, y: 0, z: -1.85}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:

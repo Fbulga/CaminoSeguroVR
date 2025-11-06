@@ -102,6 +102,7 @@ public class CarMover : MonoBehaviour
             {
                 driving = false;
                 rb.velocity = Vector3.zero;
+                gameObject.SetActive(false);
                 Debug.Log($"{name}: 🏁 Ruta completada, deteniéndose.");
             }
         }
