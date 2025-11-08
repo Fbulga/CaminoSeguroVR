@@ -25,9 +25,6 @@ public class LevelManager : MonoBehaviour
     [Header("Point to Win")]
     [SerializeField] private int crossPedestrianPath;
     
-    
-    
-    
     private int currentTimer;
 
     private void Awake()
@@ -73,10 +70,19 @@ public class LevelManager : MonoBehaviour
     {
         var finalScore = currentTimer;
     }
-
+    private void LoseLevel()
+    {
+        
+    }
+    
     private void LoseTime(int time)
     {
         currentTimer -= time;
+        if (currentTimer <= 0)
+        {
+            currentTimer = 0;
+            LoseLevel();
+        }
         UpdateTimerTMP();
     }
     
