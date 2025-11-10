@@ -15,6 +15,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Locomotion/Comfort/TunnelingVignetteController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -111,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762374126298</updated>
       <workItem from="1762374129588" duration="12562000" />
-      <workItem from="1762783705205" duration="4228000" />
+      <workItem from="1762783705205" duration="8171000" />
     </task>
     <servers />
   </component>

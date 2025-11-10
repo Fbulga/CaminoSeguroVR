@@ -80,11 +80,19 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator LoadSceneAsyncCoroutine(int sceneIndex)
     {
+        // 1. Fade OUT (cerrar visión a negro tipo túnel)
+        if (VRFadeManager.Instance != null)
+        {
+            yield return StartCoroutine(VRFadeManager.Instance.FadeOut());
+        }
+
+        // 2. Activar LoadingScreen
         if (loadingScreen != null)
         {
             loadingScreen.SetActive(true);
         }
 
+        // 3. Cargar escena de forma asíncrona
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         operation.allowSceneActivation = false;
 
@@ -105,6 +113,7 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
 
+        // 4. Desactivar LoadingScreen
         if (loadingScreen != null)
         {
             loadingScreen.SetActive(false);
@@ -114,15 +123,32 @@ public class SceneLoader : MonoBehaviour
         {
             progressSlider.value = 0f;
         }
+
+        // 4.5 Esperar un frame para asegurar que la escena se inicialice completamente
+        yield return new WaitForEndOfFrame();
+
+        // 5. Fade IN (abrir visión desde negro)
+        if (VRFadeManager.Instance != null)
+        {
+            yield return StartCoroutine(VRFadeManager.Instance.FadeIn());
+        }
     }
 
     private IEnumerator LoadSceneAsyncCoroutine(string sceneName)
     {
+        // 1. Fade OUT (cerrar visión a negro tipo túnel)
+        if (VRFadeManager.Instance != null)
+        {
+            yield return StartCoroutine(VRFadeManager.Instance.FadeOut());
+        }
+
+        // 2. Activar LoadingScreen
         if (loadingScreen != null)
         {
             loadingScreen.SetActive(true);
         }
 
+        // 3. Cargar escena de forma asíncrona
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         operation.allowSceneActivation = false;
 
@@ -143,6 +169,7 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
 
+        // 4. Desactivar LoadingScreen
         if (loadingScreen != null)
         {
             loadingScreen.SetActive(false);
@@ -151,6 +178,15 @@ public class SceneLoader : MonoBehaviour
         if (progressSlider != null)
         {
             progressSlider.value = 0f;
+        }
+
+        // 4.5 Esperar un frame para asegurar que la escena se inicialice completamente
+        yield return new WaitForEndOfFrame();
+
+        // 5. Fade IN (abrir visión desde negro)
+        if (VRFadeManager.Instance != null)
+        {
+            yield return StartCoroutine(VRFadeManager.Instance.FadeIn());
         }
     }
 }
