@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 public class CanvasManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] private GameObject roadSign;
     [SerializeField] private GameObject pedestrianSign;
     [SerializeField] private GameObject redCrossSign;
+    [SerializeField] private GameObject lookSidesWarningSign;
     [SerializeField] private GameObject lookSidesSign;
     
     [Header("Fade Control")]
@@ -82,7 +84,12 @@ public class CanvasManager : MonoBehaviour
     {
         PlayFadeSequence(redCrossSign);
     }
-
+    
+    public void HandleLookSidesWarningSignFade()
+    {
+        PlayFadeSequence(lookSidesWarningSign);
+    }
+    
     public void HandleLookSidesSignFade()
     {
         PlayFadeSequence(lookSidesSign);

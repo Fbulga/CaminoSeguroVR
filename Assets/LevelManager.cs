@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -10,7 +11,6 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance { get; private set; }
 
     [SerializeField] private bool lastLevel;
-    [SerializeField] private Collider winCollider;
     [SerializeField] private int startTime;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private CanvasManager canvasManager;
@@ -67,6 +67,15 @@ public class LevelManager : MonoBehaviour
     private void FinishLevel()
     {
         var finalScore = currentTimer;
+        GameManager.Instance.HandleNextLevel();
+    }
+
+    private void FinishGame()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#endif
     }
     private void LoseLevel()
     {
@@ -96,10 +105,13 @@ public class LevelManager : MonoBehaviour
         canvasManager.HandleRoadSignFade();
     }
 
-    public void HandlePedestrianPath()
+    public void HandlePedestrianPath(bool showUI)
     {
         GainTime(crossPedestrianPath);
-        canvasManager.HandlePedestrianPath();
+        if (showUI)
+        {
+            canvasManager.HandlePedestrianPath();
+        }
     }
     
     public void HandleLookBothSidesGood()
@@ -109,16 +121,26 @@ public class LevelManager : MonoBehaviour
     
     public void HandleLookBothSidesBad()
     {
+        canvasManager.HandleLookSidesSignFade();
         LoseTime(lookBothSides);
     }    
     public void HandleLookBothSidesWarning()
     {
-        canvasManager.HandleLookSidesSignFade();
+        canvasManager.HandleLookSidesWarningSignFade();
     }
-
-
+    
     public void HandleFinishLevel()
     {
-        FinishLevel();
+        if (!lastLevel)
+        {
+            FinishLevel();
+            return;
+        }
+        FinishGame();
+    }
+
+    public void HandleRedCrossSign()
+    {
+        canvasManager.HandleRedCrossSignFade();
     }
 }

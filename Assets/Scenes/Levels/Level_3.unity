@@ -222,7 +222,7 @@ MonoBehaviour:
   maxSpeed: 8
   acceleration: 3
   brakeDecel: 2
-  stopDistance: 7.483528
+  stopDistance: 7.1251826
   carInFront: {fileID: 1974449292}
   trafficLight: {fileID: 896323816}
   isLeader: 0
@@ -848,7 +848,7 @@ MonoBehaviour:
   maxSpeed: 8
   acceleration: 3
   brakeDecel: 2
-  stopDistance: 6.69253
+  stopDistance: 7.592658
   carInFront: {fileID: 0}
   trafficLight: {fileID: 896323816}
   isLeader: 1
@@ -906,7 +906,7 @@ MonoBehaviour:
   maxSpeed: 8
   acceleration: 3
   brakeDecel: 2
-  stopDistance: 7.40053
+  stopDistance: 6.5102854
   carInFront: {fileID: 94410030}
   trafficLight: {fileID: 896323816}
   isLeader: 0
@@ -1590,6 +1590,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6092195088783326990, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1834,7 +1838,7 @@ MonoBehaviour:
   maxSpeed: 8
   acceleration: 3
   brakeDecel: 2
-  stopDistance: 7.9228234
+  stopDistance: 7.286198
   carInFront: {fileID: 992197962}
   trafficLight: {fileID: 896323816}
   isLeader: 0
@@ -2076,7 +2080,7 @@ MonoBehaviour:
   maxSpeed: 8
   acceleration: 3
   brakeDecel: 2
-  stopDistance: 7.168844
+  stopDistance: 6.3512497
   carInFront: {fileID: 956715768}
   trafficLight: {fileID: 896323816}
   isLeader: 0
@@ -2299,6 +2303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpawner: {fileID: 2084860264}
+  toggleOnce: 0
+  alreadyToggled: 0
+  toggleRedCrossUI: 1
 --- !u!65 &2037288157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7135,6 +7142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!33 &958993988764772471
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8115,6 +8123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!64 &1103808655983516689
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14163,6 +14172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!1 &1985297785819521645
 GameObject:
   m_ObjectHideFlags: 0
@@ -14859,6 +14869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!4 &2117112368058215656
 Transform:
   m_ObjectHideFlags: 0
@@ -16806,6 +16817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!64 &2536672071737354628
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19632,6 +19644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!4 &2967139414806138793
 Transform:
   m_ObjectHideFlags: 0
@@ -21425,6 +21438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!4 &3432579175454290713
 Transform:
   m_ObjectHideFlags: 0
@@ -25642,6 +25656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!64 &4148759703206798331
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26050,6 +26065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!23 &4202080681339507061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26744,6 +26760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!23 &4299438177162595431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29770,6 +29787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!65 &4622410081542605313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36388,6 +36406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!64 &5573591380020340927
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -37265,6 +37284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!114 &5756515081769277334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38812,6 +38832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!65 &6053469684681606181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39536,6 +39557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!65 &6141503475935032413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40220,6 +40242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!65 &6199549000649772966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41272,6 +41295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!23 &6456471797478650268
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45050,6 +45074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!33 &7002161354593987519
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47641,6 +47666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!23 &7497285802213607116
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49488,6 +49514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!1 &7716432007781825447
 GameObject:
   m_ObjectHideFlags: 0
@@ -52722,6 +52749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a38f2b32b8eaeb409d24b0a63910bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showUI: 1
 --- !u!4 &8242012118063902758
 Transform:
   m_ObjectHideFlags: 0
@@ -54898,10 +54926,10 @@ MonoBehaviour:
   startTime: 100
   timerText: {fileID: 1239160948}
   canvasManager: {fileID: 1044926657}
-  lookToTheSides: 0
   touchRoad: 10
   crossWithoutLookingSides: 0
   crossPedestrianPath: 50
+  lookBothSides: 0
 --- !u!1 &8596267357172272887
 GameObject:
   m_ObjectHideFlags: 0
