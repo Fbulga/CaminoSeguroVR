@@ -15,15 +15,13 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private CanvasManager canvasManager;
     
-    [Header("Obstacles")]
-    [SerializeField] private bool lookToTheSides;
-    
     [Header("Point to Lose")]
     [SerializeField] private int touchRoad;
     [SerializeField] private int crossWithoutLookingSides;
     
     [Header("Point to Win")]
     [SerializeField] private int crossPedestrianPath;
+    [SerializeField] private int lookBothSides;
     
     private int currentTimer;
 
@@ -103,6 +101,21 @@ public class LevelManager : MonoBehaviour
         GainTime(crossPedestrianPath);
         canvasManager.HandlePedestrianPath();
     }
+    
+    public void HandleLookBothSidesGood()
+    {
+        GainTime(lookBothSides);
+    }
+    
+    public void HandleLookBothSidesBad()
+    {
+        LoseTime(lookBothSides);
+    }    
+    public void HandleLookBothSidesWarning()
+    {
+        canvasManager.HandleLookSidesSignFade();
+    }
+
 
     public void HandleFinishLevel()
     {

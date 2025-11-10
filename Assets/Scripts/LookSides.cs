@@ -1,40 +1,29 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 
 public class LookSidesController : MonoBehaviour
 {
     [SerializeField] private SideTrigger[] sideTriggers;
-    
-    [SerializeField] private float loseDelayTime;
-    
-    private Coroutine coroutine;
-
+    [SerializeField] private bool toggleOnce;
+    [ShowIf("toggleOnce")] [SerializeField] private bool alreadyToggled;
     private void OnTriggerEnter(Collider other)
     {
-        coroutine = StartCoroutine(CrossCheck());
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        StopCoroutine(coroutine);
-    }
-    
-    IEnumerator CrossCheck()
-    {
+        if (alreadyToggled)
+        {
+            return;
+        }
         if (!sideTriggers[0].sideCheck && !sideTriggers[1].sideCheck)
         {
             Debug.Log("Side/s Unchecked found");
-            yield return new WaitForSeconds(loseDelayTime);
-            Debug.Log("Lose");
+            LevelManager.instance.HandleLookBothSidesBad();
+            return;
         }
-        else
+        LevelManager.instance.HandleLookBothSidesGood();
+        if (toggleOnce)
         {
-            yield return null; 
+            alreadyToggled = true;
         }
     }
-    
 }
