@@ -15,6 +15,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private CanvasManager canvasManager;
     
+    [Header("SFX")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClipBell;
+    [SerializeField] private AudioClip audioClipWhistle;
+    [SerializeField] private AudioClip audioClipLose;
+    
     [Header("Point to Lose")]
     [SerializeField] private int touchRoad;
     [SerializeField] private int crossWithoutLookingSides;
@@ -47,16 +53,17 @@ public class LevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         currentTimer--;
-        UpdateTimerTMP();
         if (currentTimer > 0)
         {
             StartCoroutine(Timer());
         }
         else
         {
+            currentTimer = 0;
             StopCoroutine(Timer());
-            Debug.Log("Game Over");
+            LoseLevel();
         }
+        UpdateTimerTMP();
     }
 
     private void UpdateTimerTMP()
@@ -66,7 +73,7 @@ public class LevelManager : MonoBehaviour
     
     private void FinishLevel()
     {
-        var finalScore = currentTimer;
+        GameManager.Instance.totalScore += currentTimer;
         GameManager.Instance.HandleNextLevel();
     }
 
@@ -79,11 +86,13 @@ public class LevelManager : MonoBehaviour
     }
     private void LoseLevel()
     {
-        
+        audioSource.PlayOneShot(audioClipLose);
+        GameManager.Instance.ReloadScene();
     }
     
     private void LoseTime(int time)
     {
+        audioSource.PlayOneShot(audioClipWhistle);
         currentTimer -= time;
         if (currentTimer <= 0)
         {
@@ -95,6 +104,7 @@ public class LevelManager : MonoBehaviour
     
     private void GainTime(int time)
     {
+        audioSource.PlayOneShot(audioClipBell);
         currentTimer += time;
         UpdateTimerTMP();
     }
@@ -103,6 +113,7 @@ public class LevelManager : MonoBehaviour
     {
         LoseTime(touchRoad);
         canvasManager.HandleRoadSignFade();
+        GameManager.Instance.touchStreetCount++;
     }
 
     public void HandlePedestrianPath(bool showUI)
@@ -112,6 +123,7 @@ public class LevelManager : MonoBehaviour
         {
             canvasManager.HandlePedestrianPath();
         }
+        GameManager.Instance.crossPedestrianCount++;
     }
     
     public void HandleLookBothSidesGood()
@@ -123,6 +135,7 @@ public class LevelManager : MonoBehaviour
     {
         canvasManager.HandleLookSidesSignFade();
         LoseTime(lookBothSides);
+        GameManager.Instance.dontLookSidesCount++;
     }    
     public void HandleLookBothSidesWarning()
     {

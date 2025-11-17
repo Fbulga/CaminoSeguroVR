@@ -26,7 +26,6 @@ public class LookSidesController : MonoBehaviour
         }
         if (!sideTriggers[0].sideCheck && !sideTriggers[1].sideCheck)
         {
-            Debug.Log("Side/s Unchecked found");
             LevelManager.instance.HandleLookBothSidesBad();
             if (activateCarSpawner)
             {
@@ -40,9 +39,5 @@ public class LookSidesController : MonoBehaviour
             return;
         }
         LevelManager.instance.HandleLookBothSidesGood();
-        if (toggleOnce)
-        {
-            alreadyToggled = true;
-        }
     }
 }

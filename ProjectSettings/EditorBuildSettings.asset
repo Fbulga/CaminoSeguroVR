@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Levels/MainMenu.unity
-    guid: 0000000000000000000000000000000
+    guid: 6b2708f42510c354d84b24762a259793
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level_5.unity
     guid: aed10a3364562864abf87da3164830ef
+  - enabled: 1
+    path: Assets/Scenes/Levels/FinishMenu.unity
+    guid: 083a7559fc04e194796e1c9fdd771e49
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}

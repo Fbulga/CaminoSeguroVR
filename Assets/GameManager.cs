@@ -5,8 +5,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private int previousScene; 
-    
+    private int previousScene;
+
+    [SerializeField] public int totalScore;
+    [SerializeField] public int touchStreetCount;
+    [SerializeField] public int dontLookSidesCount;
+    [SerializeField] public int crossPedestrianCount;
     private void Awake()
     {
         if (Instance == null)
@@ -36,5 +40,10 @@ public class GameManager : MonoBehaviour
     {
         previousScene = SceneManager.GetActiveScene().buildIndex;
         SceneLoader.LoadSceneAsync(sceneName);
+    }
+
+    public void ReloadScene()
+    {
+        SceneLoader.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 }
